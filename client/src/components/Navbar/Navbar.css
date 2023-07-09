@@ -1,0 +1,25 @@
+/* .LogoName {
+  font-family: "Love Light";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 48px;
+  display: flex;
+  align-items: center;
+  color: #673ab7;
+} */
+
+.link {
+  text-decoration: none;
+  padding: 1px;
+  font-size: 14px;
+  font-weight: medium;
+  cursor: pointer;
+  transition: border-bottom 0.3s ease;
+}
+
+.link:hover,
+.link:active,
+.link:focus {
+  border-bottom: 2px solid blue;
+}

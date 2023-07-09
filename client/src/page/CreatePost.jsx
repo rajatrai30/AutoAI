@@ -29,15 +29,18 @@ const CreatePost = () => {
     if (form.prompt) {
       try {
         setGeneratingImg(true);
-        const response = await fetch("https://auto-ai.vercel.app/api/v1/dalle", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            prompt: form.prompt,
-          }),
-        });
+        const response = await fetch(
+          "https://auto-ai.vercel.app/api/v1/dalle",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              prompt: form.prompt,
+            }),
+          }
+        );
 
         const data = await response.json();
         setForm({ ...form, photo: `data:image/jpeg;base64,${data.photo}` });
@@ -94,7 +97,7 @@ const CreatePost = () => {
             labelName="Your Name"
             type="text"
             name="name"
-            placeholder="Ex., john doe"
+            placeholder="Ex. Rajat Rai"
             value={form.name}
             handleChange={handleChange}
           />
@@ -103,7 +106,7 @@ const CreatePost = () => {
             labelName="Prompt"
             type="text"
             name="prompt"
-            placeholder="An Impressionist oil painting of sunflowers in a purple vase…"
+            placeholder="Ex.. Robots replacing Humans"
             value={form.prompt}
             handleChange={handleChange}
             isSurpriseMe
@@ -137,7 +140,7 @@ const CreatePost = () => {
           <button
             type="button"
             onClick={generateImage}
-            className=" text-white bg-green-700 font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+            className="text-white bg-[#10131f] hover:bg-[#3f4a6f] focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none"
           >
             {generatingImg ? "Generating..." : "Generate"}
           </button>
@@ -150,7 +153,7 @@ const CreatePost = () => {
           </p>
           <button
             type="submit"
-            className="mt-3 text-white bg-[#6469ff] font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+            className="text-white bg-[#10131f] hover:bg-[#3f4a6f] focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none"
           >
             {loading ? "Sharing..." : "Share with the Community"}
           </button>
