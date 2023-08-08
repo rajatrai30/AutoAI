@@ -31,7 +31,7 @@ CLOUDINARY_API_SECRET=
 cd server && npm i
 ```
 
-### Install node_mod for server
+### Install node_mod for client
 
 ```shell
 cd client && npm i
