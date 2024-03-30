@@ -1,5 +1,7 @@
 # Introducing AutoAI - An AI based Image Generation Web App using OpenAI API.
 
+![AutoAI Logo](autoai3.png)
+
 Features:
 
 - Generate Images using Text Input.
